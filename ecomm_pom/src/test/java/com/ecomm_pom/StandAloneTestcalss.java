@@ -32,7 +32,6 @@ public class StandAloneTestcalss extends BaseTest{
 		byte[] val = pw.PasswordEncode();
 		byte[] decodeString = Base64.decodeBase64(val);
 		pwd1 = new String(decodeString);
-		System.out.println(pwd1);
 		driver.get("https://www.amazon.in/");
 		LandingPage lp = new LandingPage(driver);
 		lp.login(user, pwd1);
